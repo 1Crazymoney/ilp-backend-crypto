@@ -1,0 +1,16 @@
+{
+  // Mimic the configuration of ilp-connector (otherwise it fails)
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "es2017",
+    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "inlineSources": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true
+  }
+}
