@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
-    "build"
+    "build",
+    "temp"
   ],
   "scripts": {
     "build": "tsc",
@@ -24,8 +25,7 @@
   },
   "homepage": "https://github.com/Kava-Labs/ilp-backend-crypto#readme",
   "dependencies": {
-    "bignumber.js": "^8.0.1",
-    "crypto-rate-utils": "file:temp/crypto-rate-utils-0.1.0.tgz"
+    "bignumber.js": "^8.0.1"
   },
   "peerDependencies": {
     "ilp-connector": "^22.0.0"
