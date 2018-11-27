@@ -4,7 +4,7 @@ import {
   BackendInstance,
   BackendServices
 } from 'ilp-connector/src/types/backend'
-import { RateApi, connectCoinCap } from 'crypto-rate-utils'
+import { RateApi, connectCoinCap } from '@kava-labs/crypto-rate-utils'
 
 import { create as createLogger } from 'ilp-connector/src/common/log'
 const log = createLogger('crypto-backend')
