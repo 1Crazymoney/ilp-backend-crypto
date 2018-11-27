@@ -1,6 +1,6 @@
 {
   "name": "@kava-labs/ilp-backend-crypto",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fetch crypto exchange rates for Interledger connectors",
   "main": "build/index.js",
   "types": "build/index.d.ts",
