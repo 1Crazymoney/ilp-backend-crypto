@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/Kava-Labs/ilp-backend-crypto#readme",
   "dependencies": {
-    "@kava-labs/crypto-rate-utils": "^1.0.0",
-    "bignumber.js": "^8.0.1"
+    "@kava-labs/crypto-rate-utils": "^1.0.1",
+    "bignumber.js": "^7.2.1"
   },
   "peerDependencies": {
     "ilp-connector": "^22.0.0"
