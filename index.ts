@@ -67,16 +67,13 @@ export default class Backend implements BackendInstance {
     const { assetCode: sourceSymbol, assetScale: sourceScale } = sourceInfo
     const { assetCode: destSymbol, assetScale: destScale } = destInfo
 
-    const [sourcePrice, destPrice] = await Promise.all([
-      this.api.getPrice(sourceSymbol),
-      this.api.getPrice(destSymbol)
-    ])
+    const sourcePrice = this.api.getPrice(sourceSymbol)
+    const destPrice = this.api.getPrice(destSymbol)
 
     return sourcePrice
       .div(destPrice)
       .shiftedBy(destScale - sourceScale)
       .times(new BigNumber(1).minus(this.spread))
-      .precision(15, BigNumber.ROUND_DOWN)
       .toNumber()
   }
 
