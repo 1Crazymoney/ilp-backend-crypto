@@ -70,11 +70,13 @@ export default class Backend implements BackendInstance {
     const sourcePrice = this.api.getPrice(sourceSymbol)
     const destPrice = this.api.getPrice(destSymbol)
 
-    return sourcePrice
-      .div(destPrice)
-      .shiftedBy(destScale - sourceScale)
-      .times(new BigNumber(1).minus(this.spread))
-      .toNumber()
+    return Number(
+      sourcePrice
+        .div(destPrice)
+        .shiftedBy(destScale - sourceScale)
+        .times(new BigNumber(1).minus(this.spread))
+        .toPrecision(15)
+    )
   }
 
   // No-op since there's no statistics to be collected
@@ -84,7 +86,7 @@ export default class Backend implements BackendInstance {
 
   public async disconnect() {
     if (this.api) {
-      this.api.disconnect()
+      await this.api.disconnect()
       delete this.api
     }
   }
